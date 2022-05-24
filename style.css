@@ -1,0 +1,439 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+    background: linear-gradient(4deg,hsl(237, 49%, 15%) 17%,hsl(214, 47%, 23%) 100%);
+    height: 95.6vh;
+}
+@media (max-width: 767px) {
+    body {
+        height: auto;
+    }
+}
+ul {
+    list-style: none;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.mode {
+    position: absolute;
+    display: flex;
+    top: 2%;
+    left: 1%;
+    width: 7%;
+    justify-content: space-between;
+}
+@media (max-width: 767px) {
+    .mode {
+        left: 35%;
+        width: 30%;
+    }
+}
+.mode li {
+    color: #fdfdfd;
+}
+.mode li:nth-child(2) {
+    position: relative;
+    cursor: pointer;
+    flex: .8;
+    background-color: #fdfdfd;
+    border-radius: 24px;
+}
+.mode div {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: hsl(214, 47%, 23%);
+    border-radius: 50%;
+    left: 1%;
+    top: 2%;
+    transition: .3s;
+}
+@media (max-width: 767px) {
+    .mode div {
+        width: 16px;
+        height: 16px;
+        top: 7.5%;
+    }
+}
+.mode li:last-of-type {
+    opacity: 0.6;
+}
+header {
+    margin: 2% auto 4%;
+    width: 42%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border: 3px solid hsl(217, 16%, 45%);
+    padding: 1.5%;
+    border-radius: 18px;
+}
+@media (max-width: 767px) {
+    header {
+        margin: 12% auto 4%;
+        width: 90%;
+    }
+}
+header div {
+    width: 25%;
+}
+header p {
+    background-color: #fdfdfd;
+    padding: 3% 6% 1%;
+    font-size: 54px;
+    font-weight: 700;
+    color: hsl(229, 25%, 31%);
+    border-radius: 14px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    header p {
+        font-size: 47px;
+    }
+}
+header p::before {
+    content: 'SCORE';
+    color: hsl(229, 64%, 46%);
+    position: absolute;
+    top: 12%;
+    left: 33px;
+    font-size: 13px;
+    letter-spacing: 3.2px;
+}
+@media (max-width: 767px) {
+    header p::before {
+        left: 19px;
+        font-size: 11px;
+    }
+}
+main {
+    margin: 6% auto;
+    position: relative;
+    width: 650px;
+    height: 420px;
+    overflow-x: hidden;
+}
+@media (max-width: 767px) {
+    main {
+        width: 300px;
+        height: 475px;
+        position: relative;
+    }
+}
+main .easy {
+    position: relative;
+    margin: 8% auto;
+    width: 258px;
+    height: 300px;
+    background-image: url(images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: 0%;
+    transition: .5s;
+}
+@media (max-width: 767px) {
+    main .easy {
+        margin: 24% auto 1%;
+        width: 220px;
+        height: 219px;
+    }
+}
+main .easy .img, 
+main .hard .img {
+    width: 150px;
+    height: 150px;
+    background-color: #ebebeb;
+    padding: 10%;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    top: -14%;
+    left: -27%;
+}
+@media (max-width: 767px) {
+    main .easy .img, 
+    main .hard .img {
+        width: 90px;
+        height: 90px;
+        padding: 5%;
+        top: -15%;
+        left: -18%;
+    }
+}
+main .easy .img:first-child,
+main .hard .img:first-child {
+    border: 14px solid hsl(230, 89%, 65%);
+    box-shadow: inset 0px 7px 0px 0px #babfd396, 0 6px hsl(230deg 89% 62% / 74%);
+}
+main .easy .img:nth-child(2),
+main .hard .img:nth-child(2) {
+    left: 72%;
+    border: 14px solid hsl(40, 84%, 53%);
+    box-shadow: inset 0px 7px 0px 0px #babfd396, 0 6px hsl(39deg 89% 49% / 74%);
+}
+main .easy .img:last-child,
+main .hard .img:nth-child(3) {
+    top: 59%;
+    left: 21%;
+    border: 14px solid hsl(349, 70%, 56%);
+    box-shadow: inset 0px 7px 0px 0px #babfd396, 0 6px hsl(349deg 71% 52% / 69%);
+}
+@media (max-width: 767px) {
+    main .easy .img:last-child,
+    main .hard .img:nth-child(3) {
+        top: 61%;
+        left: 27%;
+    }
+}
+main .hard {
+    position: relative;
+    margin: 8% auto;
+    width: 300px;
+    height: 300px;
+    background-image: url(images/bg-pentagon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: 0%;
+    transition: .5s;
+}
+@media (max-width: 767px) {
+    main .hard {
+        width: 250px;
+        height: 280px;
+    }
+}
+main .hard .img {
+    width: 120px;
+    height: 120px;
+    padding: 8%;
+}
+@media (max-width: 767px) {
+    main .hard .img {
+        width: 85px;
+        height: 85px;
+        padding: 4%;
+    }
+}
+main .hard .img:first-child {
+    left: 76%;
+    top: 17%;
+}
+@media (max-width: 767px) {
+    main .hard .img:first-child {
+        left: 75%;
+        top: 24%;
+    }
+}
+main .hard .img:nth-child(2) {
+    left: 32%;
+}
+@media (max-width: 767px) {
+    main .hard .img:nth-child(2) {
+        left: 34%;
+        top: -5%;
+    }
+}
+main .hard .img:nth-child(3) {
+    left: 62%;
+    top: 74%;
+}
+main .hard .img:nth-child(4) {
+    top: 17%;
+    left: -15%;
+    border: 14px solid hsl(189, 58%, 57%);
+    box-shadow: inset 0px 7px 0px 0px #babfd396, 0 6px hsl(189deg 59% 53% / 79%);
+}
+@media (max-width: 767px) {
+    main .hard .img:nth-child(4) {
+        top: 24%;
+        left: -9%;
+    }
+}
+main .hard .img:last-child {
+    top: 74%;
+    left: 2%;
+    border: 14px solid hsl(261, 72%, 63%);
+    box-shadow: inset 0px 7px 0px 0px #babfd396, 0 6px hsl(261deg 73% 60% / 78%);
+}
+main .result {
+    position: absolute;
+    width: 678px;
+    height: 363px;
+    top: -14%;
+    left: 150%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 3%;
+    transition: .5s;
+}
+@media (max-width: 767px) {
+    main .result {
+        width: 334px;
+        height: 363px;
+        justify-content: space-around;
+    }
+}
+main .result .img {
+    width: 180px;
+    height: 180px;
+    background-color: #ebebeb;
+    padding: 6%;
+    border-radius: 50%;
+    position: relative;
+}
+@media (max-width: 767px) {
+    main .result .img {
+        width: 100px;
+        height: 100px;
+        background-color: #ebebeb;
+        padding: 3%;
+    }
+}
+main p {
+    position: absolute;
+    left: 38.5%;
+    color: #eeeeee;
+    top: 35%;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+@media (max-width: 767px) {
+    main p {
+        position: absolute;
+        left: 27%;
+        top: 88%;
+    }
+}
+main button {
+    position: relative;
+    font-size: 15px;
+    flex-basis: 30%;
+    right: 0;
+    bottom: -13%;
+    border: none;
+    color: hsl(229, 25%, 31%);
+    background-color: #fdfdfd;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    main button {
+        position: absolute;
+        right: auto;
+        left: 27.5%;
+        bottom: -19%;
+    }
+}
+aside {
+    width: 22%;
+    background-color: #fdfdfd;
+    padding: 1.5% 2%;
+    border-radius: 9px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0px 653px #00000066;
+    z-index: 3;
+}
+@media (max-width: 767px) {
+    aside {
+        width: 71%;
+        padding: 2% 2.5%;
+    }
+}
+aside div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+aside h4 {
+    text-transform: uppercase;
+    font-size: 29px;
+    color: hsl(229, 25%, 31%);
+}
+@media (max-width: 767px) {
+    aside h4 {
+        font-size: 24px;
+    }
+}
+aside .img {
+    width: 6%;
+    height: 6%;
+    padding-top: 3%;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    aside .img {
+        width: 8%;
+    }
+}
+aside > .img{
+    width: 93%;
+    margin: 10% auto 1%;
+    cursor: auto;
+}
+@media (max-width: 767px) {
+    aside > .img {
+        width: 95%;
+        margin: 7% auto 2%;
+    }
+}
+button {
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    background-color: transparent;
+    color: #eeeeee;
+    border: 2px solid #a5a5a594;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 9px 2.5%;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    font-weight: 600;
+    outline: transparent;
+    transition: .3s;
+}
+@media (max-width: 767px) {
+    button {
+        right: 33%;
+        bottom: 6%;
+        padding: 11px 8.5%;
+    }
+}
+button:hover {
+    background-color:  #eeeeee;
+    color: hsl(214, 47%, 23%);
+}
+footer { 
+    font-size: 11px; 
+    text-align: center;
+    color: white; 
+    position: relative;
+    bottom: 12%;
+}
+@media (max-width: 767px) {
+    footer {
+        bottom: auto
+    }
+}
+footer a { 
+    color: hsl(199deg 45% 44%);
+    letter-spacing: 1.2px;
+}
